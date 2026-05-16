@@ -1,8 +1,8 @@
-import React from 'react'
+import ISSTracker from "./components/ISSTracker"
 
 const App = () => {
   return (
-    <div>App</div>
+   <ISSTracker />
   )
 }
 

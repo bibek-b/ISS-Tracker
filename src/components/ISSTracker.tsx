@@ -39,7 +39,6 @@ const ISSTracker = () => {
 
         setCoordinates({ latitude, longitude });
       } catch (error) {
-        console.log(error);
         alert("Failed to fetch ISS data");
       }
     };
@@ -57,7 +56,9 @@ const ISSTracker = () => {
   //check actual coordinates arrived? if not show simple loader
   if (coordinates.latitude === 0 && coordinates.longitude === 0) {
     return (
-      <h1 className="absolute top-[45%] left-[45%] text-3xl">Loading...</h1>
+      <h1 className="absolute top-[45%] md:left-[45%] left-[30%] text-3xl">
+        Loading...
+      </h1>
     );
   }
   return (

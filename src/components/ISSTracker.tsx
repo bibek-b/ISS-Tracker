@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import L from "leaflet";
-import issImg from "../assets/space-station.png";
+import issImg from "../assets/IssImage.png";
 import FollowIss from "./FollowIss";
 import type { CoordinatesType } from "../types";
 
@@ -17,10 +17,8 @@ Map Zoom Levels
 
 const ISSIcon = L.icon({
   iconUrl: issImg,
-  iconSize: [50, 50],
+  iconSize: [75, 75],
 });
-
-// function
 
 const ISSTracker = () => {
   const [coordinates, setCoordinates] = useState<CoordinatesType>({
@@ -57,21 +55,20 @@ const ISSTracker = () => {
   }, []);
 
   //check actual coordinates arrived? if not show simple loader
-  if (
-  coordinates.latitude === 0 &&
-  coordinates.longitude === 0
-) {
-  return <h1 className="absolute top-[45%] left-[45%] text-3xl">Loading...</h1>;
-}
+  if (coordinates.latitude === 0 && coordinates.longitude === 0) {
+    return (
+      <h1 className="absolute top-[45%] left-[45%] text-3xl">Loading...</h1>
+    );
+  }
   return (
     <MapContainer
       center={[coordinates.latitude, coordinates.longitude]}
-      zoom={3}
+      zoom={4}
       style={{ height: "100vh", width: "100%" }}
     >
       <TileLayer
-        attribution="&copy; OpenStreetMap contributors"
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a>'
+        url={`https://api.maptiler.com/maps/hybrid/{z}/{x}/{y}.jpg?key=${import.meta.env.VITE_MAP_KEY}`}
       />
 
       <FollowIss coordinates={coordinates} />

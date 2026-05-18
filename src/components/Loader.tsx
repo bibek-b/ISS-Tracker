@@ -3,7 +3,7 @@ import EarthImg from "../assets/earth.png";
 const Loader = () => {
   return (
     // <div className="fixed inset-0 bg-linear-to-br from-[#0a0a2a] to-[#1a1a3a] flex items-center justify-center z-50">
-    <div className="fixed inset-0 bg-black flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-black flex items-center justify-center z-999">
     <div className="absolute inset-0 overflow-hidden">
         
   {/* Generate 100 random stars for natural-looking starfield */}

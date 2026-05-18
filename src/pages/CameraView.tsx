@@ -17,7 +17,7 @@ const CameraView = () => {
           className="relative rounded-3xl overflow-hidden border border-[rgba(99,180,255,0.15)]
                      bg-[#0b1220] shadow-[0_0_25px_rgba(59,143,255,0.08)]"
         >
-          <div className="absolute top-4 left-4 z-[999]">
+          <div className="absolute top-4 left-4 z-50">
             <div className="px-4 py-2 rounded-xl bg-[rgba(8,12,20,0.82)]
                             border border-[rgba(99,180,255,0.18)] backdrop-blur-md">
               <p

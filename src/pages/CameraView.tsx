@@ -33,7 +33,7 @@ const CameraView = () => {
 
           {/* YOUR MAP COMPONENT HERE */}
           <div className="h-[92vh] w-full bg-[#05080f] flex items-center justify-center text-[#7ec4ff]">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/FuuC4dpSQ1M?si=pWhjs9lT3vKeUdCY" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen />
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/FuuC4dpSQ1M?si=pWhjs9lT3vKeUdCY" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
           </div>
         </div>
 

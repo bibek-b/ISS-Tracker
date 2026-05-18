@@ -4,7 +4,32 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/space-station.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ISS Tracker</title>
+    
+    <!-- SEO & Meta Tags -->
+    <title>ISS Tracker - Real-Time International Space Station Tracker</title>
+    <meta name="description" content="Track the International Space Station in real-time. See live ISS location, trajectory, and get alerts when it passes over your area." />
+    <meta name="author" content="Your Name" />
+    
+    <!-- Open Graph (for social media sharing) -->
+    <meta property="og:title" content="ISS Tracker - Real-Time Space Station Tracker" />
+    <meta property="og:description" content="Track the ISS live as it orbits Earth at 17,500 mph" />
+    <meta property="og:image" content="/space-station.png" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="ISS Tracker" />
+    <meta name="twitter:description" content="Live tracking of International Space Station" />
+    
+    <!-- Theme Color (matches your black space theme) -->
+    <meta name="theme-color" content="#000000" />
+    
+    <!-- Prevent zoom issues on mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+      <!-- Preconnect to ISS API for faster requests -->
+  <link rel="preconnect" href="https://api.wheretheiss.at" />
+  <link rel="preconnect" href="https://api.maptiler.com" />
   </head>
   <body>
     <div id="root"></div>

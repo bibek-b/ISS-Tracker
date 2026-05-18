@@ -4,6 +4,7 @@ import L from "leaflet";
 import issImg from "../assets/IssImage.png";
 import FollowIss from "./FollowIss";
 import type { CoordinatesType } from "../types";
+import Loader from "./Loader";
 
 /*
 Map Zoom Levels
@@ -55,11 +56,7 @@ const ISSTracker = () => {
 
   //check actual coordinates arrived? if not show simple loader
   if (coordinates.latitude === 0 && coordinates.longitude === 0) {
-    return (
-      <h1 className="absolute top-[45%] md:left-[45%] left-[30%] text-3xl">
-        Loading...
-      </h1>
-    );
+    return <Loader />
   }
   return (
     <MapContainer

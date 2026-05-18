@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import L from "leaflet";
 import issImg from "../assets/IssImage.png";
-import FollowIss from "./FollowIss";
+import FollowIss from "../components/FollowIss";
 import type { CoordinatesType } from "../types";
-import Loader from "./Loader";
+import Loader from "../components/Loader";
 
 /*
 Map Zoom Levels

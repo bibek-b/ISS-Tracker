@@ -1,7 +1,10 @@
 // AboutISS.tsx
 
 import PageHeaders from "../components/PageHeaders";
-import { infos } from "../constants/aboutIss";
+import QuesAns from "../components/QuesAns";
+import SeparatorLine from "../components/SeparatorLine";
+import { infos, issFacts } from "../constants/aboutIss";
+import { terms } from "../constants/learnTerms";
 
 
 
@@ -64,6 +67,21 @@ const AboutISS = () => {
               </h3>
             </div>
           </div>
+        </div>
+
+        <div className="mt-10 rounded-3xl bg-[#0b1220] border border-[rgba(99,180,255,0.12)] p-8 space-y-10">
+            <h2
+            className="text-xl font-semibold mb-8"
+            style={{ fontFamily: "'Orbitron', monospace" }}
+          >
+            Interesting Facts
+          </h2>
+            {issFacts.map((data) => (
+             <>
+               <h2>{data.fact}</h2>
+             {issFacts.length > 1 && <SeparatorLine /> }
+              </>
+            ))}
         </div>
       </div>
     </section>

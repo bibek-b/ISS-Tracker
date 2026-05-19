@@ -1,5 +1,7 @@
 // Astronauts.tsx
 
+import PageHeaders from "../components/PageHeaders";
+
 const astronauts = [
   {
     name: "Sunita Williams",
@@ -21,20 +23,21 @@ const astronauts = [
 const AstronautsInfo = () => {
   return (
     <section className="min-h-screen bg-[#080c14] text-[#e8f2ff] px-6 py-10">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto space-y-10">
         {/* HEADER */}
-        <div className="mb-10">
+        {/* <div className="mb-10">
           <p
             className="text-[12px] tracking-[0.3em] uppercase text-[#7ec4ff]"
             style={{ fontFamily: "'Orbitron', monospace" }}
           >
-            Expedition Crew
+            Astronaut Information
           </p>
 
           <h1 className="text-4xl font-bold mt-3">
             Astronauts Currently In Orbit
           </h1>
-        </div>
+        </div> */}
+        <PageHeaders title="Astronaut Information" subtitle="Astronauts Currently In the International Space Station" description="Meet the brave individuals who are currently living and working in the International Space Station." />
 
         {/* GRID */}
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">

@@ -1,5 +1,7 @@
 // AboutISS.tsx
 
+import PageHeaders from "../components/PageHeaders";
+
 const infos = [
   { label: "Launch Year", value: "1998" },
   { label: "Orbit Speed", value: "27,600 km/h" },
@@ -14,8 +16,8 @@ const AboutISS = () => {
     <section className="min-h-screen bg-[#080c14] text-[#e8f2ff] px-6 py-10">
       <div className="max-w-7xl mx-auto">
         {/* HERO */}
-        <div
-          className="rounded-[32px] overflow-hidden
+        {/* <div
+          className="rounded-4xl overflow-hidden
                      border border-[rgba(99,180,255,0.15)]
                      bg-[#0b1220]
                      p-10 shadow-[0_0_35px_rgba(59,143,255,0.08)]"
@@ -38,7 +40,8 @@ const AboutISS = () => {
             laboratory for scientific research, technology development, and
             international collaboration in space exploration.
           </p>
-        </div>
+        </div> */}
+        <PageHeaders title="About The Station" subtitle="International Space Station" description="The ISS is a modular space station orbiting Earth and serves as a laboratory for scientific research, technology development, and international collaboration in space exploration." />
 
         {/* INFO GRID */}
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5 mt-8">

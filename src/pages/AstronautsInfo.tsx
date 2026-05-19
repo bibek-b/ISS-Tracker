@@ -1,24 +1,7 @@
 // Astronauts.tsx
 
 import PageHeaders from "../components/PageHeaders";
-
-const astronauts = [
-  {
-    name: "Sunita Williams",
-    country: "USA",
-    role: "Flight Engineer",
-  },
-  {
-    name: "Butch Wilmore",
-    country: "USA",
-    role: "Commander",
-  },
-  {
-    name: "Oleg Kononenko",
-    country: "Russia",
-    role: "Cosmonaut",
-  },
-];
+import { astronauts } from "../constants/astronautsInfo";
 
 const AstronautsInfo = () => {
   return (
@@ -37,7 +20,10 @@ const AstronautsInfo = () => {
             Astronauts Currently In Orbit
           </h1>
         </div> */}
-        <PageHeaders title="Astronaut Information" subtitle="Astronauts Currently In the International Space Station" description="Meet the brave individuals who are currently living and working in the International Space Station." />
+        <PageHeaders
+          title="Astronaut Information"
+          subtitle="Crew Members of the International Space Station"
+        />
 
         {/* GRID */}
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
@@ -51,16 +37,15 @@ const AstronautsInfo = () => {
                          hover:-translate-y-1"
             >
               {/* AVATAR */}
-              <div
-                className="w-20 h-20 rounded-2xl
+              <img
+                className="w-14 h-20 rounded-2xl
                            bg-[rgba(59,143,255,0.12)]
                            border border-[rgba(99,180,255,0.22)]
                            flex items-center justify-center
-                           text-3xl"
-              >
-                👨‍🚀
-              </div>
-
+                           text-3xl object-contain"
+                src={astro.avatar}
+                alt={astro.name}
+              />
               {/* INFO */}
               <div className="mt-5">
                 <h2 className="text-2xl font-semibold">{astro.name}</h2>
@@ -73,14 +58,14 @@ const AstronautsInfo = () => {
                     <span>{astro.country}</span>
                   </div>
 
-                  <div className="flex justify-between">
+                  {/* <div className="flex justify-between">
                     <span>Status</span>
 
                     <div className="flex items-center gap-2 text-[#8ed1a5]">
                       <span className="w-2 h-2 rounded-full bg-[#3ddc84] animate-pulse" />
                       Active
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

@@ -1,4 +1,4 @@
-import EarthImg from "../assets/earth.png";
+import EarthImg from "../assets/earth.webp";
 
 const Loader = () => {
   return (

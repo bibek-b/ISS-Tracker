@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import AboutISS from "./pages/AboutIss";
 import CameraView from "./pages/CameraView";
 import AstronautsInfo from "./pages/AstronautsInfo";
+import LearnTerms from "./pages/LearnTerms";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/cameraView" element={<CameraView />} />
         <Route path="/astronautsInfo" element={<AstronautsInfo />} />
         <Route path="/aboutIss" element={<AboutISS />} />
+        <Route path="/learnTerms" element={<LearnTerms />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,9 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NAVBAR_OPTIONS } from "../constants/navbar";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [currentNav, setCurrentNav] = useState<string | null>(null);
+  const currentUrlPath = window.location.pathname;
+
+  useEffect(() => {
+    setCurrentNav(currentUrlPath);
+  }, [currentUrlPath]);
+
 
   return (
     <nav
@@ -29,12 +35,12 @@ const Navbar = () => {
       <div className="flex items-center gap-2">
         {NAVBAR_OPTIONS.map((opt) => (
           <Link
-            key={opt.link}
-            to={opt.link}
-            onClick={() => setCurrentNav(opt.link)}
+            key={opt.path}
+            to={opt.path}
+            onClick={() => setCurrentNav(opt.path)}
             className={`relative px-3.5 py-1.5 rounded-md text-[13.5px] font-medium tracking-wide
                        text-[rgba(200,218,255,0.6)] transition-colors duration-200
-                       hover:text-[#e8f2ff] hover:bg-[rgba(56,140,255,0.1)] ${currentNav === opt.link ? "bg-[rgba(56,140,255,0.1)]" : ""}`}
+                       hover:text-[#e8f2ff] hover:bg-[rgba(56,140,255,0.1)] ${currentNav === opt.path ? "bg-[rgba(56,140,255,0.1)]" : ""}`}
           >
             {opt.label}
           </Link>

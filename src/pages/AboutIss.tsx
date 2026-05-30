@@ -5,8 +5,6 @@ import SeparatorLine from "../components/SeparatorLine";
 import { infos, issFacts } from "../constants/aboutIss";
 import { scrollViewToTop } from "../utils/window.utils";
 
-
-
 const AboutISS = () => {
   scrollViewToTop();
   return (
@@ -70,18 +68,22 @@ const AboutISS = () => {
         </div>
 
         <div className="mt-10 rounded-3xl bg-[#0b1220] border border-[rgba(99,180,255,0.12)] p-8 space-y-10">
-            <h2
+          <h2
             className="text-xl font-semibold mb-8"
             style={{ fontFamily: "'Orbitron', monospace" }}
           >
             Interesting Facts
           </h2>
-            {issFacts.map((data) => (
-             <>
-               <h2>{data.fact}</h2>
-             {issFacts.length > 1 && <SeparatorLine /> }
+          {issFacts.map((data, i) => {
+            return (
+              <>
+                <h2>{data.fact}</h2>
+                {issFacts.length > 1 && issFacts.length - 1 !== i && (
+                  <SeparatorLine />
+                )}
               </>
-            ))}
+            );
+          })}
         </div>
       </div>
     </section>

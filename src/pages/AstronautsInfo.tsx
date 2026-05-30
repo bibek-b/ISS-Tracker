@@ -2,8 +2,10 @@
 
 import PageHeaders from "../components/PageHeaders";
 import { astronauts } from "../constants/astronautsInfo";
+import { scrollViewToTop } from "../utils/window.utils";
 
 const AstronautsInfo = () => {
+  scrollViewToTop();
   return (
     <section className="min-h-screen bg-[#080c14] text-[#e8f2ff] px-6 py-10">
       <div className="max-w-7xl mx-auto space-y-10">

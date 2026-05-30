@@ -3,10 +3,12 @@
 import PageHeaders from "../components/PageHeaders";
 import SeparatorLine from "../components/SeparatorLine";
 import { infos, issFacts } from "../constants/aboutIss";
+import { scrollViewToTop } from "../utils/window.utils";
 
 
 
 const AboutISS = () => {
+  scrollViewToTop();
   return (
     <section className="min-h-screen bg-[#080c14] text-[#e8f2ff] px-6 py-10">
       <div className="max-w-7xl mx-auto">

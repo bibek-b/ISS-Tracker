@@ -1,7 +1,9 @@
 
 import PageHeaders from "../components/PageHeaders";
+import { scrollViewToTop } from "../utils/window.utils";
 
 const CameraView = () => {
+  scrollViewToTop();
   return (
     <section className="min-h-screen bg-[#080c14] text-[#e8f2ff] px-6 py-6">
       {/* <div className="max-w-7xl mx-auto grid lg:grid-cols-[1fr_340px] gap-6"> */}

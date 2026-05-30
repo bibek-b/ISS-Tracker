@@ -1,10 +1,8 @@
 // AboutISS.tsx
 
 import PageHeaders from "../components/PageHeaders";
-import QuesAns from "../components/QuesAns";
 import SeparatorLine from "../components/SeparatorLine";
 import { infos, issFacts } from "../constants/aboutIss";
-import { terms } from "../constants/learnTerms";
 
 
 
